@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css" integrity="sha512-jQqzj2vHVxA/yCojT8pVZjKGOe9UmoYvnOuM/2sQ110vxiajBU+4WkyRs1ODMmd4AfntwUEV4J+VfM6DkfjLRg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    const ROOM_ID = "<%= roomId %>"
+  </script>
+  
+  <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js">/**/</script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="script.js" defer></script>
+  <title>Video Chatting App</title>
+  <script src="https://kit.fontawesome.com/e5cfbda2dd.js" crossorigin="anonymous"></script>
+
+  </style>
+</head>
+<body>
+
+ <!--The body is divided in two parts a video section and a chat section-->
+  <div class="video_section">
+    <!--Chat section have a heading, video grid and fotter section -->
+             <div class="heading">
+                <h1> VideoChatApp</h1>
+                <button id="copy_link">Copy Link</button>
+             </div>
+             <div id="video-grid"> <!--Here appears the videos of users-->
+              <div id="showCopied"><p>Link copied successfully!</p></div>
+             </div>
+             <div id='footer'>
+             <!--this includes all the buttons-->
+                <div id='microphone'>
+                  <i class="fas fa-microphone "></i>
+                </div>
+                <div id="share_video">
+                  <i class="fas fa-video"></i>
+                </div>
+                <div id="leave_call">
+                  <i class="fas fa-phone-slash"></i>
+                </div>
+                <div id="menu">
+                  <i class="fas fa-ellipsis-v edit-name"></i>
+                </div>
+              
+             </div>
+  </div>
+  <!--chat section is where users can share the chat messages-->
+  <div class="chat_section">
+    <div id="chat_heading">
+      <h4>Chat</h4>
+    </div>
+    <div id="chat_messages_container">
+       <div class="chat_message" id="welcome_message">
+         <p>Welcome to the chat section. Here you can chat with your friends</p>
+       </div>
+    </div>
+    <div id="chat_message_typing">
+      <form id="chat_message_form">
+        <input value="" name="message" required placeholder="Type your message...."/>
+        <button>send</button>
+      </form>
+    </div>
+  </div>
+
+ 
+  </body>
+</body>
+</html>

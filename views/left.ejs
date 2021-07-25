@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Video Chatting App</title>
+    <script>
+        const url='<%=url %>'
+        const newCall=()=>{
+            window.location.href = `${url}`;
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+        body{
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        #container{
+            border:2px solid rgba(46, 157, 248, 0.945);
+            color:rgba(46, 157, 248, 0.945);
+            font-family: 'Arvo', serif;
+            height: 50%;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            background-color: rgba(46, 157, 248, 0.945);
+            padding: 20px;
+            border :none;
+            outline:none;
+            border-radius: 5px;
+            color: white;
+            font-family: 'Arvo', serif;
+            margin-top: 40px;
+            font-size: 16px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>ThankYou for visiting</h1>
+        <button onclick="newCall()">New call</button>
+    </div>
+   
+</body>
+</html>
